@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Muenster population stats</title>
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    html,
+    body,
+    #map {
+      height: 100%;
+      width: 100%;
+    }
+
+    .info {
+      padding: 6px 8px;
+      font: 14px/16px Helvetica, sans-serif;
+      background: white;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    .info h4 {
+      margin: 0 0 5px;
+      color: #777;
+    }
+
+    .legend {
+      text-align: left;
+      line-height: 18px;
+      color: #555;
+    }
+
+    .legend i {
+      width: 18px;
+      height: 18px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+
+    .menu-ui {
+      position: absolute;
+      top: 35%;
+      right: 10px;
+    }
+
+    path {
+      -webkit-transition: fill 200ms;
+      transition: fill 200ms;
+    }
+
+    #loader {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 1);
+      transition: background 1s ease-out;
+      -webkit-transition: background 1s ease-out;
+      font: 14px/16px Helvetica, sans-serif;
+    }
+
+    #loader.done {
+      background: rgba(255, 255, 255, 0);
+    }
+
+    #loader.hide {
+      display: none;
+    }
+
+    #loader .message {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id='loader'><span class='message'>loading</span></div>
+  <div id="map"></div>
+  <div id='variables' class='info menu-ui'>
+    <h4>Choropleth Filter</h4></div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+  <script src="js/leaflet.ajax.min.js"></script>
+  <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
