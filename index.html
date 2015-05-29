@@ -9,6 +9,9 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
 
+	<!-- BS is only used for the bottons, might want to get rid of it. Most visitors probably have it cached though -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
       padding: 0;
@@ -52,7 +55,7 @@
 
     .menu-ui {
       position: absolute;
-      top: 35%;
+      top: 80%;
       right: 10px;
     }
 
@@ -85,6 +88,7 @@
       left: 50%;
       top: 50%;
     }
+
   </style>
 
 </head>
@@ -93,7 +97,26 @@
   <div id='loader'><span class='message'>loading</span></div>
   <div id="map"></div>
   <div id='variables' class='info menu-ui'>
-    <h4>Choropleth Filter</h4></div>
+    <h4>Choropleth Filter</h4>
+
+		<div id="filterBtn" class="btn-group" role="group">
+	  	<button type="button" class="btn btn-sm btn-primary" data-filter="kids">Kinder</button>
+	  	<button type="button" class="btn btn-sm btn-default" data-filter="teen">Teenager</button>
+	  	<button type="button" class="btn btn-sm btn-default" data-filter="adult">Erwachsene</button>
+			<button type="button" class="btn btn-sm btn-default" data-filter="senior">Senioren</button>
+		</div>
+
+		<br>
+		<br>
+
+		<div id="typeBtn" class="btn-group" role="group">
+	  	<button type="button" class="btn btn-sm btn-primary" data-type="Absolute">Absolute</button>
+	  	<button type="button" class="btn btn-sm btn-default" data-type="Relative">Relative</button>
+		</div>
+
+
+
+	</div>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
